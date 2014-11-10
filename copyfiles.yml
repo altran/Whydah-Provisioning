@@ -1,0 +1,6 @@
+---
+- name: Example of copying some files and folders to remote server
+  hosts: Whydah_UserIdentityBackend
+  tasks:
+    - name: Sync some stuff
+      synchronize: src=copy_data_from_folder/ dest=/home/UserIdentityBackend/ recursive=yes
