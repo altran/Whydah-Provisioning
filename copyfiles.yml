@@ -1,6 +1,8 @@
 ---
 - name: Example of copying some files and folders to remote server
   hosts: Whydah_UserIdentityBackend
+  sudo: true
+  sudo_user: UserIdentityBackend
   tasks:
-    - name: Sync some stuff
-      synchronize: src=copy_data_from_folder/ dest=/home/UserIdentityBackend/ recursive=yes
+    - name: Copy files and folders to root folder
+      copy: src=copy_data_from_folder/ dest=/home/UserIdentityBackend/
