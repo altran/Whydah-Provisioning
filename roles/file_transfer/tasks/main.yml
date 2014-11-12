@@ -1,0 +1,5 @@
+---
+- name: Copy files and folders to remote server
+  sudo: true
+  sudo_user: "{{username}}"
+  copy: src=./ dest=/home/{{username}}/ backup=yes
