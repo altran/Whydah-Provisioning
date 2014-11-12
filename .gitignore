@@ -4,3 +4,9 @@
 /.settings
 /.project
 /.classpath
+
+#Ignore directories which should be symlinket to configuration directories. 
+group_vars
+hosts
+roles/file_transfer/files
+vars
