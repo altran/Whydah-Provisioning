@@ -26,12 +26,11 @@
     username: UserIdentityBackend
     group_id: net/whydah/identity
     app_name: UserIdentityBackend
-    version: 2.0-rc-2
     env_mode: PROD
     env_vars: -DIAM_MODE=PROD
     service_config_template: useridentitybackend.properties
     service_config: useridentitybackend.PROD.properties
-    verify_service_url: http://localhost:9995/uib/authenticate/application/
+    #verify_service_url: http://localhost:9995/uib/authenticate/application/
   vars_files:
     - vars/uib
 
@@ -59,7 +58,6 @@
     username: SecurityTokenService
     group_id: net/whydah/token
     app_name: SecurityTokenService
-    version: 2.0-rc-2
     env_vars: -DIAM_MODE=PROD -Dhazelcast.config=hazelcast.xml
     service_config_template: securitytokenservice.properties
     service_config: securitytokenservice.PROD.properties
@@ -79,7 +77,6 @@
     username: SSOLoginWebApp
     group_id: net/whydah/sso
     app_name: SSOLoginWebApp
-    version: 2.0-rc-2
     env_vars: -DIAM_MODE=PROD
     service_config_template: ssologinservice.properties
     service_config: ssologinservice.PROD.properties
@@ -99,7 +96,6 @@
     username: UserAdminWebApp
     group_id: net/whydah/identity
     app_name: UserAdminWebApp
-    version: 2.0-rc-2
     env_vars: -DIAM_MODE=PROD
     service_config_template: useradminwebapp.properties
     service_config: useradminwebapp.PROD.properties
@@ -119,12 +115,13 @@
     username: TestWebApp
     group_id: net/whydah/sso/web
     app_name: TestWebApp
-    version: 2.0-rc-2
     env_vars: -DIAM_MODE=TEST
     service_port: 9990
     service_config_template: testwebapp.properties
     service_config: testwebapp.TEST.properties
     verify_service_url: http://localhost:9990/test/hello
+  vars_files:
+    - vars/testwebapp
 
 - name: Set up Apache config
   hosts: Whydah_SSOLoginWebApp
