@@ -19,6 +19,7 @@
   sudo: true
   roles:
     - configuration
+    - file_transfer
     - app
   tags:
     uib
