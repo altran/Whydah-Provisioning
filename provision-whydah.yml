@@ -34,6 +34,9 @@
     #verify_service_url: http://localhost:9995/uib/authenticate/application/
   vars_files:
     - vars/uib
+  tasks:
+  - name: Add UIB specific libraries
+    yum: name=openldap-clients state=present
 
 - name: Create STS hazelcast file
   hosts: Whydah_SecurityTokenService
