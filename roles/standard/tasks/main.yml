@@ -1,4 +1,7 @@
 ---
+- name: Disable requirement of tty to enable pipelining
+  lineinfile: dest=/etc/sudoers regexp="Defaults    requiretty" line="Defaults    !requiretty"
+
 - name: Upgrade all packages
   yum: name=* state=latest
 
