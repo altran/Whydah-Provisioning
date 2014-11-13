@@ -31,6 +31,7 @@
     env_vars: -DIAM_MODE=PROD
     service_config_template: useridentitybackend.properties
     service_config: useridentitybackend.PROD.properties
+    folders_to_copy: prodInitData
     #verify_service_url: http://localhost:9995/uib/authenticate/application/
   vars_files:
     - vars/uib
