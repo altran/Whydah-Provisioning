@@ -1,5 +1,5 @@
 ---
-- name: Disable requirement of tty to enable pipelining
+- name: Disable requirement of tty to enable pipelining - If this step fails - temporarily set ansible.cfg pipelining = False
   lineinfile: dest=/etc/sudoers regexp="Defaults    requiretty" line="Defaults    !requiretty"
 
 - name: Upgrade all packages
