@@ -16,8 +16,10 @@
             <aws enabled="true">
                 <access-key>{{hazelcast_access_key}}</access-key>
                 <secret-key>{{hazelcast_secret_key}}</secret-key>
+                <!--
                 <region>{{hazelcast_region}}</region>
                 <security-group-name>{{hazelcast_security_group_name}}</security-group-name>
+                -->
             </aws>
         </join>
     </network>
