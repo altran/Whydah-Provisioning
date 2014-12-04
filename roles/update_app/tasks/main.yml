@@ -1,0 +1,22 @@
+---
+
+- name: Set app version
+  lineinfile: dest=/home/{{username}}/update-service.sh regexp="^V=" line='V={{version}}'
+  sudo: false
+  
+- name: Fetch {{version}} of app
+  command: /home/{{username}}/update-service.sh chdir=/home/{{username}}
+  sudo_user: "{{username}}"
+
+- name: ReStart App service
+  service: name="{{app_name}}" state=restarted
+
+#### Test that service works:
+- wait_for: port={{service_port}} delay=5 timeout=30
+
+- name: Test that service responds
+  get_url: url={{verify_service_url}} dest=/tmp/test_{{app_name}} force=true
+  when: verify_service_url is defined
+  register: result
+
+- debug: msg="{{result}}"

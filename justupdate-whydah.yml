@@ -1,0 +1,63 @@
+---
+# This playbook updates whydah to a given version when it has already been deployed
+
+- name: Update Whydah UserIdentityBackend
+  hosts: Whydah_UserIdentityBackend
+  roles:
+    - update_app
+  tags:
+    uib
+  vars:
+    username: UserIdentityBackend
+    app_name: UserIdentityBackend
+  vars_files:
+    - vars/uib
+
+- name: Update Whydah SecurityTokenService
+  hosts: Whydah_SecurityTokenService
+  roles:
+    - update_app
+  tags:
+    sts
+  vars:
+    username: SecurityTokenService
+    app_name: SecurityTokenService
+  vars_files:
+    - vars/securityTokenService
+
+- name: Update Whydah SSOLoginWebApp
+  hosts: Whydah_SSOLoginWebApp
+  roles:
+    - update_app
+  tags:
+    sso
+  vars:
+    username: SSOLoginWebApp
+    app_name: SSOLoginWebApp
+  vars_files:
+    - vars/ssoLogin
+
+- name: Set up Whydah UserAdminWebApp
+  hosts: Whydah_UserAdminWebApp
+  roles:
+    - update_app
+  tags:
+    admin
+  vars:
+    username: UserAdminWebApp
+    app_name: UserAdminWebApp
+  vars_files:
+    - vars/userAdministration
+
+- name: Set up Whydah TestWebApp
+  hosts: Whydah_TestWebApp
+  sudo: true
+  roles:
+    - update_app
+  tags:
+    testapp
+  vars:
+    username: TestWebApp
+    app_name: TestWebApp
+  vars_files:
+    - vars/testwebapp

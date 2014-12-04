@@ -11,3 +11,5 @@ group_vars
 hosts
 roles/file_transfer/files
 vars
+
+log.csv
