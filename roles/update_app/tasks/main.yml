@@ -1,15 +1,19 @@
 ---
 
-- name: Set app version
+- name: Set app version to fetch - {{version}}
   lineinfile: dest=/home/{{username}}/update-service.sh regexp="^V=" line='V={{version}}'
-  sudo: false
+  sudo_user: "{{username}}"
   
-- name: Fetch {{version}} of app
+- name: Fetch version {{version}} of app
   command: /home/{{username}}/update-service.sh chdir=/home/{{username}}
   sudo_user: "{{username}}"
 
+#- name: ReStart App service
+#  service: name="{{app_name}}" state=restarted
+
 - name: ReStart App service
-  service: name="{{app_name}}" state=restarted
+  command: restart-{{app_name}}.sh
+
 
 #### Test that service works:
 - wait_for: port={{service_port}} delay=5 timeout=30
