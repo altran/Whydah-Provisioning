@@ -1,0 +1,31 @@
+ Whydah research and development,2014-08-15 12:23:53 +0200,5,Delmal,,,jhmaurtvedt,Added import and and gmail config for uib.
+ Whydah research and development,2014-08-15 09:42:32 +0200,5,Delmal,,,Stig Lau,Merge remote-tracking branch 'origin/master'
+ Whydah research and development,2014-08-15 09:41:56 +0200,5,Delmal,,,Stig Lau,#1 Changed config templates after refactoring in UIB
+ Whydah research and development,2014-08-15 09:04:20 +0200,5,Delmal,,,Stig Lau,#1 Changed config templates after refactoring in UIB
+ Whydah research and development,2014-08-15 08:47:35 +0200,5,Delmal,,,maurtvedt,Update main.yml
+ Whydah research and development,2014-08-15 08:44:43 +0200,5,Delmal,,,Stig Lau,Upgrades all installed packages to lates greatest in case of security-outdated packages
+ Whydah research and development,2014-06-26 10:40:36 +0200,5,Delmal,,,Stig Lau,Fixed erronous config in AdminWebapp causing problems finding users token/role
+ Whydah research and development,2014-06-19 14:13:39 +0200,5,Delmal,,,Stig Lau,Problems getting UIB up fast enough when provisioning all apps at once :(
+ Whydah research and development,2014-06-19 11:15:49 +0200,5,Delmal,,,Stig Lau,Server users now get bash in stead of sh Will push out only lates-greatest snapshots
+ Whydah research and development,2014-06-18 17:00:35 +0200,5,Delmal,,,Stig Lau,Upgrading SSOLogin to 0.6.0 release
+ Whydah research and development,2014-06-05 15:09:52 +0200,5,Delmal,,,Stig Lau,Moved into own config module
+ Whydah research and development,2014-06-05 15:08:31 +0200,5,Delmal,,,Stig Lau,Added service_port to most services so they can be pinged after startup
+ Whydah research and development,2014-06-05 13:54:10 +0200,5,Delmal,,,Stig Lau,Added apache config Will now check if UIB and possibly other services are up and running
+ Whydah research and development,2014-05-30 11:30:18 +0200,5,Delmal,,,Stig Lau,Fixed sso URL to make userAdmin work
+ Whydah research and development,2014-05-28 13:49:09 +0200,5,Delmal,,,Stig Lau,Found the last config params to get backend up and running
+ Whydah research and development,2014-05-28 10:21:28 +0200,5,Delmal,,,Stig Lau,Sym link is updated if none existed Writes warning when updating with SNAPSHOT because of latest version bug
+ Whydah research and development,2014-05-28 10:06:35 +0200,5,Delmal,,,Stig Lau,Moved "-jar" to right before .jar file in startup script Update/download script can now tacke both snapshot and release dependencies, and removed some nasty bugs on version
+ Whydah research and development,2014-05-27 12:51:49 +0200,5,Delmal,,,Stig Lau,Testing if changes to config is accepted by application or neglected
+ Whydah research and development,2014-05-27 10:42:16 +0200,5,Delmal,,,Stig Lau,Added config file to startup script of app
+ Whydah research and development,2014-05-27 10:35:37 +0200,5,Delmal,,,Stig Lau,Testing
+ Whydah research and development,2014-05-27 09:52:45 +0200,5,Delmal,,,Stig Lau,moved Altran specific configuration into own project
+ Whydah research and development,2014-05-26 10:51:09 +0200,5,Delmal,,,Stig Lau,Whydah Service configuration near working condition
+ Whydah research and development,2014-05-23 15:45:50 +0200,5,Delmal,,,Stig Lau,Service configuration turned into something really nice
+ Whydah research and development,2014-05-23 15:17:05 +0200,5,Delmal,,,Stig Lau,Service config hanging neatly together
+ Whydah research and development,2014-05-23 13:00:15 +0200,5,Delmal,,,Stig Lau,Added some documentation Will need to look further into installation setup of the specific components that require more than just running the application
+ Whydah research and development,2014-05-23 12:49:02 +0200,5,Delmal,,,Stig Lau,Merge branch 'master' of https://github.com/altran/Whydah-Provisioning
+ Whydah research and development,2014-05-23 12:48:12 +0200,5,Delmal,,,Stig Lau,Changed install/startup sequence of apps
+ Whydah research and development,2014-05-23 03:40:58 -0700,5,Delmal,,,Stig Lau,Initial commit
+ Whydah research and development,2014-05-23 11:49:36 +0200,5,Delmal,,,Stig Lau,Looks like everything works. Now to set up the order of starting
+ Whydah research and development,2014-05-23 11:38:16 +0200,5,Delmal,,,Stig Lau,TokenService now starts up
+ Whydah research and development,2014-05-23 10:43:26 +0200,5,Delmal,,,Stig Lau,UserAdminWebapp can now be deployed. Not tested integration
