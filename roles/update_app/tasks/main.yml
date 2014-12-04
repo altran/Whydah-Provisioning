@@ -8,11 +8,13 @@
   command: /home/{{username}}/update-service.sh chdir=/home/{{username}}
   sudo_user: "{{username}}"
 
-#- name: ReStart App service
-#  service: name="{{app_name}}" state=restarted
-
+# This step may fail if the service has been tampered with
 - name: ReStart App service
-  command: restart-{{app_name}}.sh
+  service: name="{{app_name}}" state=restarted
+  ignore_errors: yes
+
+#- name: ReStart App service
+#  command: /home/ec2-user/restart-{{app_name}}.sh chdir=/home/ec2-user/
 
 
 #### Test that service works:

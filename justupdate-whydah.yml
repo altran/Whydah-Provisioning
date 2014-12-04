@@ -3,6 +3,7 @@
 
 - name: Update Whydah UserIdentityBackend
   hosts: Whydah_UserIdentityBackend
+  sudo: true
   roles:
     - update_app
   tags:
