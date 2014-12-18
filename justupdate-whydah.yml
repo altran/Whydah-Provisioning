@@ -16,6 +16,7 @@
 
 - name: Update Whydah SecurityTokenService
   hosts: Whydah_SecurityTokenService
+  sudo: true
   roles:
     - update_app
   tags:
@@ -28,6 +29,7 @@
 
 - name: Update Whydah SSOLoginWebApp
   hosts: Whydah_SSOLoginWebApp
+  sudo: true
   roles:
     - update_app
   tags:
@@ -40,6 +42,7 @@
 
 - name: Set up Whydah UserAdminWebApp
   hosts: Whydah_UserAdminWebApp
+  sudo: true
   roles:
     - update_app
   tags:
