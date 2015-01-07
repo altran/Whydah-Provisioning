@@ -8,6 +8,7 @@
     - Whydah_SSOLoginWebApp
     - Whydah_UserAdminWebApp
     - Whydah_TestWebApp
+    - Whydah_UserAdminService
   sudo: true
   roles:
     - standard
@@ -107,6 +108,25 @@
     verify_service_url: http://localhost:9996/useradmin
   vars_files:
     - vars/userAdministration
+
+- name: Set up Whydah UserAdminService
+  hosts: Whydah_UserAdminService
+  sudo: true
+  roles:
+    - configuration
+    - app
+  tags:
+    admin
+  vars:
+    username: UserAdminService
+    group_id: net/whydah/identity
+    app_name: UserAdminService
+    env_vars: -DIAM_MODE=PROD
+    service_config_template: useradminservice.properties
+    service_config: useradminservice.PROD.properties
+    verify_service_url: http://localhost:9992/uas
+  vars_files:
+    - vars/userAdminService
 
 - name: Set up Whydah TestWebApp
   hosts: Whydah_TestWebApp
