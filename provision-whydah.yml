@@ -97,7 +97,7 @@
     - configuration
     - app
   tags:
-    admin
+    uawa
   vars:
     username: UserAdminWebApp
     group_id: net/whydah/identity
@@ -116,7 +116,7 @@
     - configuration
     - app
   tags:
-    admin
+    uas
   vars:
     username: UserAdminService
     group_id: net/whydah/identity
