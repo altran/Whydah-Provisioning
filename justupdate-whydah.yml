@@ -40,20 +40,33 @@
   vars_files:
     - vars/ssoLogin
 
-- name: Set up Whydah UserAdminWebApp
+- name: Update Whydah UserAdminWebApp
   hosts: Whydah_UserAdminWebApp
   sudo: true
   roles:
     - update_app
   tags:
-    admin
+    uawa
   vars:
     username: UserAdminWebApp
     app_name: UserAdminWebApp
   vars_files:
     - vars/userAdministration
 
-- name: Set up Whydah TestWebApp
+- name: Update Whydah UserAdminService
+  hosts: Whydah_UserAdminService
+  sudo: true
+  roles:
+    - update_app
+  tags:
+    uas
+  vars:
+    username: UserAdminService
+    app_name: UserAdminService
+  vars_files:
+    - vars/userAdminService
+
+- name: Update Whydah TestWebApp
   hosts: Whydah_TestWebApp
   sudo: true
   roles:
