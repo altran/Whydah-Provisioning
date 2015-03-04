@@ -1,2 +1,3 @@
 #!/bin/sh
-sudo initctl restart {{app_name}}
+sudo pkill -u {{username}} --full {{app_name}}
+sudo initctl start {{app_name}}
