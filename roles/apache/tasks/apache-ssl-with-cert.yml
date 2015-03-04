@@ -1,0 +1,10 @@
+---
+- name: Ensure ssl directory exists
+  file: path=/etc/httpd/ssl state=directory mode=600
+
+- name: Copy Apache ssl certificate files
+  copy: src={{item}} dest=/etc/httpd/ssl/{{item}} backup=true mode=600
+  with_items:
+    - "{{apache_cert_file}}"
+    - "{{apache_cert_private_key}}"
+    - "{{apache_cert_chain}}"

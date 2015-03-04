@@ -1,0 +1,13 @@
+---
+# These tasks install Apache web server
+- name: Remove Apache default conf
+  file: dest=/etc/httpd/conf.d/welcome.conf state=absent
+
+- name: Create apache root landing page
+  template: src=root_landingpage.html dest=/var/www/html/index.html owner=root group=root mode=644 backup=true
+
+- name: Whydah image
+  copy: src=whydah.png dest=/var/www/html/logo.png owner=root group=root mode=644
+
+- name: Whydah favicon
+  copy: src=favicon.ico dest=/var/www/html/ owner=root group=root mode=644
